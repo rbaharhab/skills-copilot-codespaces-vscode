@@ -15,6 +15,7 @@ Here's a recap of all the tasks you completed:
 - Use Copilot to accept suggested code.
 - Use Copilot's hub for alternate suggestions.
 - Leverage comments to have Copilot auto-suggest code.
+- Enable Claude Agent for AI-powered code analysis and assistance.
 
 ### Additional learning and resources
 
@@ -22,6 +23,8 @@ Here's a recap of all the tasks you completed:
 - [About enterprise accounts for Copilot Business](https://docs.github.com/en/enterprise-cloud@latest/admin/copilot-business-only/about-enterprise-accounts-for-copilot-business)
 - [Getting started with Copilot](https://docs.github.com/en/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-visual-studio-code)
 - [Configure Copilot settings](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-settings-on-githubcom)
+- [Claude Code - Anthropic's AI Assistant](https://claude.ai)
+- [VS Code Extensions for AI Development](https://marketplace.visualstudio.com/vscode)
 
 ### What's next?
 

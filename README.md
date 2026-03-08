@@ -9,9 +9,9 @@
   Add your open source license, GitHub uses the MIT license.
 -->
 
-# Code with GitHub Copilot
+# Code with GitHub Copilot and Claude Agent
 
-_GitHub Copilot can help you code by offering autocomplete-style suggestions right in VS Code and Codespaces._
+_GitHub Copilot and Claude Agent can help you code by offering autocomplete-style suggestions and AI-powered assistance right in VS Code and Codespaces._
 
 </header>
 

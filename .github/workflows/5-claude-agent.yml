@@ -1,9 +1,9 @@
-name: Step 4, Add Copilot suggestion from comment
+name: Step 5, Enable Claude Agent
 
-# This step triggers after push to main#comments.js.
-# This step updates from step 3 to step 4.
+# This step triggers after push with updated devcontainer.json including Claude extension.
+# This step updates from step 4 to step 5.
 
-# This will run every time we main#comments.js.
+# This will run every time we update devcontainer.json with Claude extension.
 # Reference: https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ on:
     branches:
       - main
     paths:
-      - "comments.js"
+      - ".devcontainer/devcontainer.json"
 
 # Reference: https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 permissions:
@@ -35,12 +35,13 @@ jobs:
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
-  on_push_to_comments:
-    name: On code generated from comment
+  on_claude_agent_enabled:
+    name: On Claude Agent enabled in devcontainer
     needs: get_current_step
 
     # We will only run this action when:
     # 1. This repository isn't the template repository.
+    # 2. The step is currently 4 (we're ready to move to step 5)
     # Reference: https://docs.github.com/en/actions/learn-github-actions/contexts
     # Reference: https://docs.github.com/en/actions/learn-github-actions/expressions
     if: ${{ !github.event.repository.is_template && needs.get_current_step.outputs.current_step == 4}}
@@ -55,12 +56,12 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches.
 
-      # Verify the learner added the file contents.
-      - name: Check workflow contents, jobs
+      # Verify the learner added the Claude extension to devcontainer.json
+      - name: Check devcontainer.json for Claude extension
         uses: skills/action-check-file@v1
         with:
-          file: "comments.js"
-          search: "Create web server"
+          file: ".devcontainer/devcontainer.json"
+          search: "Anthropic\\.claude-code"
 
       # In README.md, switch step 4 for step 5.
       - name: Update to step 5

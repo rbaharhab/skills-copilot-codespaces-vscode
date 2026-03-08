@@ -1,11 +1,19 @@
 {
-    // Name this configuration
     "name": "Codespace for Skills!",
     "customizations": {
         "vscode": {
             "extensions": [
-                "GitHub.copilot"
-            ]
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
+            ],
+            "settings": {
+                "github.copilot.advanced": {
+                    "agentSelector": {
+                        "enabled": true
+                    }
+                },
+                "github.copilot.chat.agentDropdown.enabled": true
+            }
         }
     }
 }

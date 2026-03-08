@@ -1,0 +1,40 @@
+{
+    "github.copilot.advanced": {
+        "agentSelector": {
+            "enabled": true
+        }
+    },
+    "github.copilot.chat.agentDropdown.enabled": true,
+    "chat.experimental.agents": {
+        "enabled": true,
+        "providers": [
+            {
+                "id": "github-copilot",
+                "name": "GitHub Copilot",
+                "enabled": true
+            },
+            {
+                "id": "claude",
+                "name": "Claude",
+                "enabled": true
+            },
+            {
+                "id": "openai-codex",
+                "name": "Codex",
+                "enabled": true
+            }
+        ]
+    },
+    "github.copilot.chat.agentProviders": [
+        "copilot",
+        "claude",
+        "codex"
+    ],
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    }
+}
